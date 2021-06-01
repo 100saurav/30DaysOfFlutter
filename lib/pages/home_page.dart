@@ -14,7 +14,15 @@ class HomePage extends StatelessWidget {
           child: Text("Welcome to $days days of flutter by $name"),
         ),
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(
+                decoration: BoxDecoration(color: Colors.deepPurple),
+                child: Text("Drawer Header"))
+          ],
+        ),
+      ),
     );
   }
 }
