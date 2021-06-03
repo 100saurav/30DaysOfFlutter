@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_catalog/pages/home_page.dart';
 import 'package:flutter_catalog/utils/routes.dart';
 
 class LoginPage extends StatefulWidget {
@@ -18,7 +19,13 @@ class _LoginPageState extends State<LoginPage> {
         changeButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      await Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => HomePage(
+                    user_name: name,
+                  )));
+
       setState(() {
         changeButton = false;
       });
