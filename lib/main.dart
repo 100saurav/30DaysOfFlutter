@@ -14,11 +14,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       themeMode: ThemeMode.light,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.black),
+            color: Colors.white,
+            textTheme: Theme.of(context).textTheme,
+          )),
       darkTheme: ThemeData(
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
+        appBarTheme: AppBarTheme(color: Colors.white),
       ),
       initialRoute: "/",
       routes: {

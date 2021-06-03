@@ -3,10 +3,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   final int days = 30;
   final String name = "Codepur";
-  final String user_name;
   final String email = "singh.abhaysingh.abhay0009@gmail.com";
-
-  HomePage({@required this.user_name});
 
   @override
   Widget build(BuildContext context) {
